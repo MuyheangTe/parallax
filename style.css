@@ -18,14 +18,16 @@ body {
 }
 
 .awesome {
-  background: gray;
-  width: 250px;
+  background: rgba(128, 128, 128, 0.123);
+  width: 400px;
   height: 150px;
   border-radius: 10px;
   padding: 10px;
   position: absolute;
   left: calc(8%);
   top: calc(25%);
+  backdrop-filter: blur(3px);
+  color: rgba(255, 255, 255, 0.63);
 }
 
 .arrow {
@@ -59,15 +61,33 @@ body {
 .navlink {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.nav-ul {
+  display: flex;
+  justify-content: space-between;
   gap: 1rem;
+}
+.navlink li:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+  transition: all 0.5s;
+  color: orangered;
+}
+.navlink ul {
+  list-style-type: none;
 }
 
 .parallax1 {
-  background-image: url(./assets/a.jpg);
+  background: url(./assets/a.jpg) no-repeat center;
   min-height: 500px;
   background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* background-position: center;
+  background-repeat: no-repeat; */
   background-size: cover;
 
   display: flex;
@@ -94,11 +114,9 @@ body {
   letter-spacing: 5px;
 }
 .parallax2 {
-  background-image: url(./assets/b.jpg);
+  background: url(./assets/b.jpg) no-repeat center;
   min-height: 500px;
   background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
 
   display: flex;
@@ -106,14 +124,20 @@ body {
   align-items: center;
 }
 .parallax3 {
-  background-image: url(./assets/d.jpg);
+  background: url(./assets/d.jpg) no-repeat center;
   min-height: 500px;
   background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.footer {
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: white;
 }
